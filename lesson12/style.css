@@ -1,0 +1,87 @@
+
+/* lesson 12. Homework 12.1 */
+.btn-input,
+.btn-go{
+    background-color: #186fcd;
+    color: #fff;
+    border: none;
+    padding: 13px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 16px;
+    display: inline-block;
+}
+
+/* lesson 12. Homework 12.1 end */
+
+
+/* lesson 12. Homework 12.2 */
+button{
+    background-color: #186fcd;
+    color: #fff;
+    padding: 10px 35px;
+    border: none;
+    margin-right: 20px;
+
+}
+/* lesson 12. Homework 12.2 end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* lesson 12. Homework 12.3 end */
+.todo-list {
+    height: auto;
+    min-height: 400px;
+    background-color: bisque;
+    padding: 20px;
+    padding-bottom: 50px;
+    margin-top: 40px;
+    max-width: 600px;
+    border: rgb(7, 71, 71);
+    border: 1px solid;
+}
+
+
+.input-text {
+    width: 200px;
+    background-color: rgb(234, 252, 246);
+}
+
+.button-todo,
+.input-button {
+    background-color: rgb(6, 190, 128);
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+ .item{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 50px;
+}
+
+.block-input {
+    margin-top: 30px;
+    display: flex;
+
+}
+
+/* lesson 12. Homework 12.3 end */

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    
+      }
+
+      .contact-card {
+        width: 100%;
+        max-width: 900px;
+        background: #f3f3f7;
+        padding: 50px 55px;
+        border-radius: 20px;
+      }
+
+      .contact-card h1 {
+        color: #ff3f7a;
+        font-size: 50px;
+        font-weight: 700;
+        margin-bottom: 40px;
+      }
+
+      .form-group {
+        margin-bottom: 28px;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        border: none;
+        outline: none;
+        background: #fff;
+        border-radius: 14px;
+        padding: 20px 24px;
+        font-size: 22px;
+        color: #555;
+      }
+
+      textarea {
+        height: 160px;
+        resize: vertical;
+      }
+
+      .section-title {
+        color: #b7b8c3;
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 40px 0 24px;
+      }
+
+      .submit-btn {
+        width: 100%;
+        border: none;
+        border-radius: 20px;
+        background: #2fa1f3;
+        color: #fff;
+        font-size: 26px;
+        font-weight: 700;
+        padding: 24px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .submit-btn:hover {
+        background: #1f8ce0;
+      }
+    </style>
+  </head>
+  <body>
+<div class="contact-card">
+  <h1>Ми можемо вам допомогти</h1>
+  <form action="#" method="post" id="fields">
+    <div class="form-group">
+      <input type="text" name="name" placeholder="Name" id="name" pattern="">
+      <span></span>
+    </div>
+    <div class="form-group">
+      <textarea name="message" placeholder="Message" id="message"></textarea>
+      <span></span>
+    </div>
+    <div class="section-title">Залишилися питання?</div>
+    <div class="form-group">
+      <input type="tel" name="phone" placeholder="Phone number" id="phone" pattern="">
+      <span></span>
+    </div>
+    <div class="form-group">
+      <input type="email" name="email" placeholder="Email" id="email" pattern="">
+      <span></span>
+    </div>
+    <button type="submit" class="submit-btn">Відправити повідомлення</button>
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="homework_13.js"></script>
+  </body>
+</html>
