@@ -1,29 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <script src="homework_19.js" defer></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="homework_19.js" defer></script>
+    <title>Погода</title>
 </head>
-
 <body>
-    
-        <h1>Погода</h1>
-        
-        <a href="https://openweathermap.org/" target="_blank" rel="noopener noreferrer">
-          <span>Powered by OpenWeatherMap</span>
-        <img src="https://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/icons/logo_60x60.png" alt="OpenWeatherMap Logo" width="30" height="30">
-          
-        </a>
-
-        <button id="getWeatherBtn">Оновити погоду</button>
-            <div id="weatherInfo"></div>
-     
-
-    
-    <script src="homework_19.js"></script>
+    <h1>Погода</h1>
+    <div class="weather-block">
+        <div class="temperature">Температура:</div>
+        <div class="weather">Погода:</div>
+        <div class="humidity">Вологість:</div>
+        <div class="pressure">Тиск:</div>
+        <div class="wind">Швидкість вітру:</div>
+        <button class="update-weather-btn">Оновити погоду</button>
+    </div>
 </body>
 
 </html>
