@@ -1,0 +1,16 @@
+.hero {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+  border-radius: 90px;
+  overflow: hidden;
+}
+
+.hero-container {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+
+}
