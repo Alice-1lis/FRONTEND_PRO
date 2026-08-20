@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f0f4ff 0%, #e6f7f1 100%);
+  font-family: "Segoe UI", system-ui, sans-serif;
+
+}
+
+.app {
+  width: 100%;
+  max-width: 520px;
+  min-height: 240px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  margin-top: 30px;
+  margin: auto;
+
+}
+
+.app h1 {
+  margin: 0 0 24px;
+  font-size: 34px;
+  font-weight: 500;
+  color: #1f2937;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+
+}
+
+form input[type="text"] {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  border: 1.5px solid #a1b3cc;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+form input[type="text"]:focus {
+  border-color: #393ceb;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.error {
+  color: #dc2626;
+  font-size: 13px;
+  margin-top: -2px;
+}
+
+form button[type="submit"] {
+  margin-top: 10px;
+  padding: 11px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background: #6366f1;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+form button[type="submit"]:hover {
+  background: #4f46e5;
+}
+
+form button[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: #f8fafc;
+  border-radius: 10px;
+  transition: background 0.15s ease;
+}
+
+li:hover {
+  background: #f1f5f9;
+}
+
+li input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #6366f1;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+li span {
+  flex: 1;
+  font-size: 15px;
+  color: #1f2937;
+  word-break: break-word;
+}
+
+li.done span {
+  color: #788394;
+  text-decoration: line-through;
+}
+
+li button {
+  background: transparent;
+  border: none;
+  color: #7c8693;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 6px;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+li button:hover {
+  color: #dc2626;
+  background: #fee2e2;
+}
