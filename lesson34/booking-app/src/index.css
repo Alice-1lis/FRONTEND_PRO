@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  background: linear-gradient(180deg, #FBF8F2 0%, #F3EEE2 100%);
+  min-height: 100vh;
+}
+
+::selection {
+  background: #F5A623;
+  color: #0F3D5C;
+}
