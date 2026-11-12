@@ -1,0 +1,150 @@
+{
+  "language": "Language",
+  "cities": {
+    "Boston": "Boston",
+    "New York": "New York"
+  },
+  "nav": {
+    "main": "Main",
+    "about": "About app",
+    "hotels": "Hotels",
+    "favorites": "Favorites",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "common": {
+    "backToResults": "Back to results",
+    "backToSearch": "Back to search",
+    "goToSearch": "Go to search"
+  },
+  "main": {
+    "title": "Find your next stay",
+    "subtitle": "Enter a city below, like Boston or New York, and we'll show you the available hotels there",
+    "error": "Something went wrong while searching for hotels."
+  },
+  "form": {
+    "destination": "Destination",
+    "guests": "Guests",
+    "checkIn": "Check-in",
+    "checkOut": "Check-out",
+    "search": "Search Hotels",
+    "required": "Required field",
+    "checkOutAfter": "Check-out must be after check-in"
+  },
+  "hotels": {
+    "title": "Available Hotels",
+    "empty": "No hotels to show yet. Go to the Main page and search first.",
+    "noResults": "No hotels found for this destination. Try another city or different dates."
+  },
+  "favorites": {
+    "title": "Your Favorites",
+    "empty": "You haven't saved any hotels yet. Tap the heart icon on a hotel card to add it here.",
+    "clear": "Clear all"
+  },
+  "about": {
+    "title": "Booking App",
+    "p1": "The app helps you find and book a place to stay, wherever your trip takes you. Choose a destination, enter your dates, and within seconds you'll see real results.",
+    "p2": "Every search runs in the background, so you never have to stare at a blank screen while you wait. As soon as the results are ready, you land straight on a list of hotels that match your search.",
+    "p3": "Save the places you like with a tap of the heart and come back to them whenever you're ready to decide.",
+    "techTitle": "Technologies",
+    "techIntro": "This is a single-page application built with React 19 and bundled with Vite.",
+    "tech": {
+      "ui": { "label": "Interface", "text": "Material UI" },
+      "routing": { "label": "Routing", "text": "React Router" },
+      "forms": { "label": "Forms and validation", "text": "React Final Form" },
+      "state": { "label": "Global state", "text": "Redux" },
+      "async": {
+        "label": "Async requests and loading, success and error states",
+        "text": "Redux Saga"
+      },
+      "i18n": {
+        "label": "Multilingual support",
+        "text": "i18next with automatic browser language detection"
+      },
+      "http": { "label": "HTTP requests", "text": "Axios" },
+      "server": {
+        "label": "Server side",
+        "text": "Node.js and Express with CORS and dotenv"
+      },
+      "quality": { "label": "Code quality", "text": "ESLint" }
+    }
+  },
+  "footer": {
+    "tagline": "Find and book the stay that fits you best, wherever your next trip takes you.",
+    "navigate": "Navigate",
+    "contacts": "Contacts",
+    "contactText": "Contact us for any questions.",
+    "rights": "© {{year}} Booking App — Concept."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "The page you're looking for doesn't exist.",
+    "button": "Back to Main"
+  },
+  "a11y": {
+    "addFavorite": "Add to favorites",
+    "removeFavorite": "Remove from favorites",
+    "scrollTop": "Scroll to top",
+    "stars_one": "{{count}} star",
+    "stars_other": "{{count}} stars"
+  },
+  "card": {
+    "fromCentre": "{{km}} km from centre",
+    "freeCancellation": "Free cancellation",
+    "breakfastIncluded": "Breakfast included",
+    "roomsLeft": "Only {{n}} left at this price",
+    "taxes": "Includes taxes and fees"
+  },
+  "stay": {
+    "nights_one": "{{count}} night",
+    "nights_other": "{{count}} nights",
+    "adults_one": "{{count}} adult",
+    "adults_other": "{{count}} adults"
+  },
+  "reviews": {
+    "exceptional": "Exceptional",
+    "superb": "Superb",
+    "veryGood": "Very good",
+    "good": "Good",
+    "pleasant": "Pleasant",
+    "count_one": "{{count, number}} review",
+    "count_other": "{{count, number}} reviews"
+  },
+  "amenities": {
+    "wifi": "Free WiFi",
+    "parking": "Parking",
+    "ac": "Air conditioning",
+    "kitchen": "Kitchen",
+    "nonsmoking": "Non-smoking rooms",
+    "family": "Family rooms",
+    "pets": "Pets allowed",
+    "shuttle": "Airport shuttle",
+    "breakfast": "Breakfast included"
+  },
+  "description": {
+    "intro0": "{{name}} is located in {{city}}, {{km}} km from the city centre.",
+    "intro1": "Offering a convenient location in {{city}}, {{name}} is just {{km}} km from the city centre.",
+    "intro2": "{{name}} welcomes guests in {{city}}, only {{km}} km from the city centre.",
+    "outro0": "Guests can relax in bright, well-equipped rooms and enjoy easy access to local restaurants, cafés and public transport.",
+    "outro1": "Each unit comes with a private bathroom and free toiletries, and the neighbourhood offers plenty of shops and sights within walking distance.",
+    "outro2": "The property features modern, comfortable rooms, and popular attractions can be reached within a short walk or ride."
+  },
+  "details": {
+    "notFoundTitle": "Hotel not found",
+    "notFoundText": "This can happen if you open the link directly without doing a search first, since results are only kept in memory. Please go back to Main and search again.",
+    "facilities": "Most popular facilities",
+    "about": "About this property",
+    "checkInOut": "Check-in and check-out",
+    "checkInOutText": "Check-in from 15:00 · Check-out until 11:00",
+    "contacts": "Contacts",
+    "website": "Visit website",
+    "perNight": "{{price}} per night",
+    "noPrepayment": "No prepayment needed",
+    "book": "Book now",
+    "bookTitle": "Confirm your booking",
+    "total": "Total",
+    "confirm": "Confirm booking",
+    "cancel": "Cancel",
+    "booked": "Booking confirmed! Your reference: {{ref}}"
+  }
+}

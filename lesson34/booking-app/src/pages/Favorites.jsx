@@ -1,9 +1,11 @@
 import { useSelector } from "react-redux";
 import { Typography, Grid, Alert, Box } from "@mui/material";
 import HotelCard from "../components/HotelCard";
+import { useTranslation } from "react-i18next";
 
 const Favorites = () => {
   const { list: favorites } = useSelector((state) => state.favorites);
+  const { t } = useTranslation();
   return (
     <Box>
       <Typography
@@ -15,12 +17,11 @@ const Favorites = () => {
           color: "primary.main",
         }}
       >
-        Your Favorites
+        {t("favorites.title")}
       </Typography>
       {favorites.length === 0 && (
         <Alert severity="info" sx={{ borderRadius: 2 }}>
-          You haven't saved any hotels yet. Tap the heart icon on a hotel card
-          to add it here.
+          {t("favorites.empty")}
         </Alert>
       )}
       <Grid container spacing={{ xs: 2, sm: 3 }} sx={{ mt: 1 }}>

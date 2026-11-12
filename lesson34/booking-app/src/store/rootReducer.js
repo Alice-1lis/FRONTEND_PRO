@@ -1,7 +1,7 @@
-import { combineReducers } from 'redux';
-import destinationsReducer from './destinations/destinationsReducer';
-import hotelsReducer from './hotels/hotelsReducer';
-import favoritesReducer from './favorites/favoritesReducer';
+import { combineReducers } from "redux";
+import destinationsReducer from "./destinations/destinationsReducer";
+import hotelsReducer from "./hotels/hotelsReducer";
+import favoritesReducer from "./favorites/favoritesReducer";
 
 const rootReducer = combineReducers({
   destinations: destinationsReducer,

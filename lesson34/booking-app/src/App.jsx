@@ -5,7 +5,14 @@ import AppRoutes from "./routes/AppRoutes";
 
 function App() {
   return (
-    <Box sx={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+    <Box
+      sx={{
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        overflowX: "clip",
+      }}
+    >
       <Header />
       <Box
         component="main"

@@ -5,7 +5,8 @@ import { ThemeProvider, CssBaseline } from "@mui/material";
 import App from "./App";
 import { store } from "./store";
 import theme from "./theme";
-import "./index.css";
+//import "./index.css";
+import "./i18n";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Provider store={store}>
@@ -17,4 +18,3 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </BrowserRouter>
   </Provider>,
 );
-

@@ -1,9 +1,17 @@
 import { useSelector } from "react-redux";
 import { Typography, Grid, Alert, CircularProgress, Box } from "@mui/material";
 import HotelCard from "../components/HotelCard";
+import { useTranslation } from "react-i18next";
 
 const Hotels = () => {
-  const { list: hotels, loading, error } = useSelector((state) => state.hotels);
+  const {
+    list: hotels,
+    loading,
+    error,
+    searchParams,
+  } = useSelector((state) => state.hotels);
+  const { t } = useTranslation();
+  const hasSearched = Boolean(searchParams && searchParams.destination);
 
   return (
     <Box>
@@ -16,7 +24,7 @@ const Hotels = () => {
           color: "primary.main",
         }}
       >
-        Available Hotels
+        {t("hotels.title")}
       </Typography>
 
       {loading && (
@@ -32,7 +40,7 @@ const Hotels = () => {
       )}
       {!loading && !error && hotels.length === 0 && (
         <Alert severity="info" sx={{ borderRadius: 2 }}>
-          No hotels to show yet. Go to the Main page and search first.
+          {hasSearched ? t("hotels.noResults") : t("hotels.empty")}
         </Alert>
       )}
 

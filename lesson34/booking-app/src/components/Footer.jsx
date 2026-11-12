@@ -10,11 +10,18 @@ import {
   IconButton,
 } from "@mui/material";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import TelegramIcon from "@mui/icons-material/Telegram";
-import InstagramIcon from "@mui/icons-material/Instagram";
+import { Link as RouterLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { glassSx } from "../styles/glass";
+import { socialButtonSx } from "../styles/social";
+import { socialLinks } from "../constants/socialLinks";
 
+const footerLinkSx = {
+  opacity: 0.85,
+  "&:hover": { opacity: 1, color: "secondary.main" },
+};
 const Footer = () => {
+  const { t } = useTranslation();
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -23,13 +30,14 @@ const Footer = () => {
     <Box
       component="footer"
       sx={{
+        ...glassSx,
         position: "relative",
         mt: "auto",
-        background: "linear-gradient(135deg, #0F3D5C 0%, #092740 100%)",
         color: "rgba(255,255,255,0.85)",
         pt: { xs: 4, sm: 5 },
-        pb: { xs: 3, sm: 3 },
-        borderTop: "3px solid #F5A623",
+        pb: 3,
+        borderTop: "3px solid",
+        borderColor: "secondary.main",
       }}
     >
       <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 3 } }}>
@@ -38,62 +46,62 @@ const Footer = () => {
           spacing={{ xs: 3, sm: 4 }}
           sx={{
             justifyContent: "space-between",
-            alignItems: { xs: "flex-start", sm: "flex-start" },
+            alignItems: "flex-start",
           }}
         >
           <Box>
             <Typography
               variant="h6"
-              sx={{ color: "#fff", fontWeight: 700, mb: 1 }}
+              component={RouterLink}
+              to="/"
+              sx={{
+                color: "#fff",
+                fontWeight: 700,
+                mb: 1,
+                display: "inline-block",
+                textDecoration: "none",
+              }}
             >
               Booking App
             </Typography>
             <Typography variant="body2" sx={{ maxWidth: 280, opacity: 0.75 }}>
-              Find and book the stay that fits you best, wherever your next trip
-              takes you.
+              {t("footer.tagline")}
             </Typography>
           </Box>
-
           <Box>
             <Typography
               variant="subtitle2"
-              sx={{ color: "#F5A623", fontWeight: 700, mb: 1 }}
+              sx={{ color: "secondary.main", fontWeight: 700, mb: 1 }}
             >
-              Navigate
+              {t("footer.navigate")}
             </Typography>
             <Stack spacing={0.75}>
               <Link
-                href="/"
+                component={RouterLink}
+                to="/"
                 underline="hover"
                 color="inherit"
-                sx={{
-                  opacity: 0.85,
-                  "&:hover": { opacity: 1, color: "#F5A623" },
-                }}
+                sx={footerLinkSx}
               >
-                Main
+                {t("nav.main")}
               </Link>
               <Link
-                href="/about"
+                component={RouterLink}
+                to="/about"
                 underline="hover"
                 color="inherit"
-                sx={{
-                  opacity: 0.85,
-                  "&:hover": { opacity: 1, color: "#F5A623" },
-                }}
+                sx={footerLinkSx}
               >
-                About us
+                {t("nav.about")}
               </Link>
               <Link
-                href="/hotels"
+                component={RouterLink}
+                to="/hotels"
                 underline="hover"
                 color="inherit"
-                sx={{
-                  opacity: 0.85,
-                  "&:hover": { opacity: 1, color: "#F5A623" },
-                }}
+                sx={footerLinkSx}
               >
-                Hotels
+                {t("nav.hotels")}
               </Link>
             </Stack>
           </Box>
@@ -101,74 +109,31 @@ const Footer = () => {
           <Box>
             <Typography
               variant="subtitle2"
-              sx={{ color: "#F5A623", fontWeight: 700, mb: 1 }}
+              sx={{ color: "secondary.main", fontWeight: 700, mb: 1 }}
             >
-              Contacts
+              {t("footer.contacts")}
             </Typography>
             <Typography
               variant="body2"
               sx={{ opacity: 0.75, maxWidth: 260, mb: 1.5 }}
             >
-              Contact us for any questions or support.
+              {t("footer.contactText")}
             </Typography>
             <Stack direction="row" spacing={1}>
-              <IconButton
-                component="a"
-                href="https://github.com/Alice-1lis"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                size="small"
-                sx={{
-                  color: "rgba(255,255,255,0.85)",
-                  border: "1px solid rgba(255,255,255,0.2)",
-                  "&:hover": {
-                    color: "#F5A623",
-                    borderColor: "#F5A623",
-                    bgcolor: "rgba(245,166,35,0.1)",
-                  },
-                }}
-              >
-                <GitHubIcon fontSize="small" />
-              </IconButton>
-              <IconButton
-                component="a"
-                href="https://t.me/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Telegram"
-                size="small"
-                sx={{
-                  color: "rgba(255,255,255,0.85)",
-                  border: "1px solid rgba(255,255,255,0.2)",
-                  "&:hover": {
-                    color: "#F5A623",
-                    borderColor: "#F5A623",
-                    bgcolor: "rgba(245,166,35,0.1)",
-                  },
-                }}
-              >
-                <TelegramIcon fontSize="small" />
-              </IconButton>
-              <IconButton
-                component="a"
-                href="https://instagram.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                size="small"
-                sx={{
-                  color: "rgba(255,255,255,0.85)",
-                  border: "1px solid rgba(255,255,255,0.2)",
-                  "&:hover": {
-                    color: "#F5A623",
-                    borderColor: "#F5A623",
-                    bgcolor: "rgba(245,166,35,0.1)",
-                  },
-                }}
-              >
-                <InstagramIcon fontSize="small" />
-              </IconButton>
+              {socialLinks.map(({ href, label, icon: Icon }) => (
+                <IconButton
+                  key={label}
+                  component="a"
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  size="small"
+                  sx={socialButtonSx}
+                >
+                  <Icon fontSize="small" />
+                </IconButton>
+              ))}
             </Stack>
           </Box>
         </Stack>
@@ -180,7 +145,7 @@ const Footer = () => {
           align="center"
           sx={{ opacity: 0.6, fontSize: "0.8rem" }}
         >
-          © {new Date().getFullYear()} Booking App — training project.
+          {t("footer.rights", { year: new Date().getFullYear() })}
         </Typography>
       </Container>
 
@@ -188,17 +153,17 @@ const Footer = () => {
         <Fab
           size="medium"
           onClick={scrollToTop}
-          aria-label="Scroll to top"
+          aria-label={t("a11y.scrollTop")}
           sx={{
             position: "absolute",
             top: -24,
             right: { xs: 16, sm: 32 },
-            bgcolor: "#F5A623",
-            color: "#0F3D5C",
+            bgcolor: "secondary.main",
+            color: "primary.main",
             boxShadow: "0 6px 18px rgba(245, 166, 35, 0.4)",
             transition: "all 0.25s ease",
             "&:hover": {
-              bgcolor: "#FFC35C",
+              bgcolor: "secondary.light",
               transform: "translateY(-3px)",
               boxShadow: "0 10px 24px rgba(245, 166, 35, 0.55)",
             },

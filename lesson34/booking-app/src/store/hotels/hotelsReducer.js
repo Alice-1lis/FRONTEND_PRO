@@ -4,6 +4,7 @@ import {
   SEARCH_HOTELS_FAILURE,
   RESET_HOTELS_STATUS,
 } from "./hotelsActions";
+import { HOTEL_IMAGES_COUNT } from "../../utils/getHotelImage";
 
 const initialState = {
   list: [],
@@ -22,13 +23,18 @@ const hotelsReducer = (state = initialState, action) => {
         status: "loading",
         searchParams: action.payload,
       };
+
     case SEARCH_HOTELS_SUCCESS:
       return {
         ...state,
         loading: false,
         status: "success",
-        list: action.payload,
+        list: action.payload.map((hotel, index) => ({
+          ...hotel,
+          imageIndex: (index % HOTEL_IMAGES_COUNT) + 1,
+        })),
       };
+
     case SEARCH_HOTELS_FAILURE:
       return {
         ...state,
